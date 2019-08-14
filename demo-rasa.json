@@ -1,0 +1,696 @@
+{
+  "rasa_nlu_data": {
+    "regex_features": [
+      {
+        "name": "zipcode",
+        "pattern": "[0-9]{5}"
+      },
+      {
+        "name": "greet",
+        "pattern": "hey[^\\s]*"
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "chinese",
+        "synonyms": ["Chinese", "Chines", "chines"]
+      },
+      {
+        "value": "vegetarian",
+        "synonyms": ["veggie", "vegg"]
+      },
+      {
+        "value": "hi",
+        "synonyms": ["expensive", "valued"]
+      },
+      {
+        "value": "lo",
+        "synonyms": ["cheap"]
+      }
+    ],
+    "common_examples": [
+      {
+        "text": "hey", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "howdy", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hey there",
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hello", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hi", 
+        "intent": "greet", 
+        "entities": []
+      },
+      {
+        "text": "good morning",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "good evening",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "dear sir",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "yes", 
+        "intent": "affirm", 
+        "entities": []
+      }, 
+      {
+        "text": "yep", 
+        "intent": "affirm", 
+        "entities": []
+      }, 
+      {
+        "text": "yeah", 
+        "intent": "affirm", 
+        "entities": []
+      },
+      {
+        "text": "indeed",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "that's right",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "ok",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "great",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "right, thank you",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "correct",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "great choice",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "sounds really good",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "I'd like a ticket from Shanghai to Beijing on September 9.",
+        "intent": "train_info",
+        "entities": [
+          {
+            "start": 23,
+            "end": 31,
+            "value": "Shanghai",
+            "entity": "start_place"
+          },
+          {
+            "start": 35,
+            "end": 42,
+            "value": "Beijing",
+            "entity": "end_place"
+          },
+          {
+            "start": 46,
+            "end": 55,
+            "value": "9",
+            "entity": "month"
+          },
+          {
+            "start": 56,
+            "end": 57,
+            "value": "9",
+            "entity": "day"
+          }
+
+        ]
+      },
+      {
+        "text": "Let me know all the trains from Chengdu to Hefei on December 1st.",
+        "intent": "train_info",
+        "entities": [
+          {
+            "start": 32,
+            "end": 39,
+            "value": "Chengdu",
+            "entity": "start_place"
+          },
+          {
+            "start": 43,
+            "end": 48,
+            "value": "Hefei",
+            "entity": "end_place"
+          },
+          {
+            "start": 52,
+            "end": 60,
+            "value": "12",
+            "entity": "month"
+          },
+          {
+            "start": 61,
+            "end": 64,
+            "value": "1",
+            "entity": "day"
+          }
+
+        ]
+      },
+      {
+        "text": "Now I'm in Lanzhou. I want to go to Nanjing.",
+        "intent": "train_info",
+        "entities": [
+          {
+            "start": 11,
+            "end": 18,
+            "value": "Lanzhou",
+            "entity": "start_place"
+          },
+          {
+            "start": 36,
+            "end": 43,
+            "value": "Nanjing",
+            "entity": "end_place"
+          }
+
+        ]
+      },
+      {
+        "text": "Check the train from Tianjin to Chongqing on April 2nd.",
+        "intent": "train_info",
+        "entities": [
+          {
+            "start": 21,
+            "end": 28,
+            "value": "Tianjin",
+            "entity": "start_place"
+          },
+          {
+            "start": 32,
+            "end": 41,
+            "value": "Chongqing",
+            "entity": "end_place"
+          },
+          {
+            "start": 45,
+            "end": 50,
+            "value": "4",
+            "entity": "month"
+          },
+          {
+            "start": 51,
+            "end": 54,
+            "value": "2",
+            "entity": "day"
+          }
+
+        ]
+      },
+      {
+        "text": "The place of departure is Shenyang and the destination is Urumqi.",
+        "intent": "train_info",
+        "entities": [
+          {
+            "start": 26,
+            "end": 34,
+            "value": "Shenyang",
+            "entity": "start_place"
+          },
+          {
+            "start": 58,
+            "end": 64,
+            "value": "Urumqi",
+            "entity": "end_place"
+          }
+
+        ]
+      },
+      {
+        "text": "I'd like to inquire about the ticket from Taiyuan to Harbin on 2018-02-24.",
+        "intent": "train_info",
+        "entities": [
+          {
+            "start": 42,
+            "end": 49,
+            "value": "Taiyuan",
+            "entity": "start_place"
+          },
+          {
+            "start": 53,
+            "end": 59,
+            "value": "Harbin",
+            "entity": "end_place"
+          },
+          {
+            "start": 68,
+            "end": 70,
+            "value": "2",
+            "entity": "month"
+          },
+          {
+            "start": 71,
+            "end": 73,
+            "value": "24",
+            "entity": "day"
+          }
+
+        ]
+      },
+      {
+        "text": "Information on the high-speed railway from Hohhot to Guiyang on 1998-11-06",
+        "intent": "train_info",
+        "entities": [
+          {
+            "start": 43,
+            "end": 49,
+            "value": "Hohhot",
+            "entity": "start_place"
+          },
+          {
+            "start": 53,
+            "end": 60,
+            "value": "Guiyang",
+            "entity": "end_place"
+          },
+          {
+            "start": 69,
+            "end": 71,
+            "value": "11",
+            "entity": "month"
+          },
+          {
+            "start": 72,
+            "end": 74,
+            "value": "6",
+            "entity": "day"
+          }
+
+        ]
+      },
+      {
+        "text": "I'm going to Shanghai by train.",
+        "intent": "train_info",
+        "entities": [
+
+          {
+            "start": 13,
+            "end": 18,
+            "value": "Shanghai",
+            "entity": "end_place"
+          }
+
+        ]
+      },
+      {
+        "text": "I want to take the train to Shijiazhuang on 2013-12-11.",
+        "intent": "train_info",
+        "entities": [
+          {
+            "start": 28,
+            "end": 40,
+            "value": "Shijiazhuang",
+            "entity": "end_place"
+          },
+          {
+            "start": 49,
+            "end": 51,
+            "value": "12",
+            "entity": "month"
+          },
+          {
+            "start": 52,
+            "end": 54,
+            "value": "11",
+            "entity": "day"
+          }
+
+        ]
+      },
+      {
+        "text": "I want to inquire about train ticket information.",
+        "intent": "train_info",
+        "entities": []
+      },
+      {
+        "text": "2004-02-01.",
+        "intent": "time_info",
+        "entities": [
+          {
+            "start": 5,
+            "end": 7,
+            "value": "2",
+            "entity": "month"
+          },
+          {
+            "start": 8,
+            "end": 10,
+            "value": "1",
+            "entity": "day"
+          }
+
+        ]
+      },
+      {
+        "text": "2019-08-15.",
+        "intent": "time_info",
+        "entities": [
+          {
+            "start": 5,
+            "end": 7,
+            "value": "8",
+            "entity": "month"
+          },
+          {
+            "start": 8,
+            "end": 10,
+            "value": "15",
+            "entity": "day"
+          }
+
+        ]
+      },
+      {
+        "text": "2020-08-17.",
+        "intent": "time_info",
+        "entities": [
+          {
+            "start": 5,
+            "end": 7,
+            "value": "8",
+            "entity": "month"
+          },
+          {
+            "start": 8,
+            "end": 10,
+            "value": "17",
+            "entity": "day"
+          }
+
+        ]
+      },
+      {
+        "text": "2019-09-11.",
+        "intent": "time_info",
+        "entities": [
+          {
+            "start": 5,
+            "end": 7,
+            "value": "9",
+            "entity": "month"
+          },
+          {
+            "start": 8,
+            "end": 10,
+            "value": "11",
+            "entity": "day"
+          }
+
+        ]
+      },
+      {
+        "text": "2019-10-01.",
+        "intent": "time_info",
+        "entities": [
+          {
+            "start": 5,
+            "end": 7,
+            "value": "10",
+            "entity": "month"
+          },
+          {
+            "start": 8,
+            "end": 10,
+            "value": "1",
+            "entity": "day"
+          }
+
+        ]
+      },
+      {
+        "text": "2019-10-10.",
+        "intent": "time_info",
+        "entities": [
+          {
+            "start": 5,
+            "end": 7,
+            "value": "10",
+            "entity": "month"
+          },
+          {
+            "start": 8,
+            "end": 10,
+            "value": "10",
+            "entity": "day"
+          }
+
+        ]
+      },
+      {
+        "text": "2019-08-30.",
+        "intent": "time_info",
+        "entities": [
+          {
+            "start": 5,
+            "end": 7,
+            "value": "8",
+            "entity": "month"
+          },
+          {
+            "start": 8,
+            "end": 10,
+            "value": "30",
+            "entity": "day"
+          }
+
+        ]
+      },
+      {
+        "text": "2010-03-31.",
+        "intent": "time_info",
+        "entities": [
+          {
+            "start": 5,
+            "end": 7,
+            "value": "3",
+            "entity": "month"
+          },
+          {
+            "start": 8,
+            "end": 10,
+            "value": "31",
+            "entity": "day"
+          }
+
+        ]
+      },
+      {
+        "text": "2010-3-31.",
+        "intent": "time_info",
+        "entities": [
+          {
+            "start": 5,
+            "end": 6,
+            "value": "3",
+            "entity": "month"
+          },
+          {
+            "start": 7,
+            "end": 9,
+            "value": "31",
+            "entity": "day"
+          }
+
+        ]
+      },
+      {
+        "text": "on 2019-05-20 please.",
+        "intent": "time_info",
+        "entities": [
+          {
+            "start": 8,
+            "end": 10,
+            "value": "5",
+            "entity": "month"
+          },
+          {
+            "start": 11,
+            "end": 13,
+            "value": "20",
+            "entity": "day"
+          }
+
+        ]
+      },
+      {
+        "text": "I'm leaving on 1992-01-15.",
+        "intent": "time_info",
+        "entities": [
+          {
+            "start": 20,
+            "end": 22,
+            "value": "1",
+            "entity": "month"
+          },
+          {
+            "start": 23,
+            "end": 25,
+            "value": "15",
+            "entity": "day"
+          }
+
+        ]
+      },
+      {
+        "text": "bye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "goodbye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "good bye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "stop", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "end", 
+        "intent": "goodbye", 
+        "entities": []
+      },
+      {
+        "text": "farewell",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "Bye bye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "have a good one",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "a cheap hotel in the north",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 2,
+            "end": 7,
+            "value": "cheap",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "an expensive hotel in the south",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 12,
+            "value": "expensive",
+            "entity": "price"
+          },
+          {
+            "start": 26,
+            "end": 31,
+            "value": "south",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "a hotel in the downtown",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "downtown",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "in the north of town",
+        "intent": "location",
+        "entities": [
+          {
+            "start": 7,
+            "end": 12,
+            "value": "north",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "in the south of town",
+        "intent": "location",
+        "entities": [
+          {
+            "start": 7,
+            "end": 12,
+            "value": "south",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "1235etrynbewew12435jnel",
+        "intent": "default",
+        "entities": []
+      },
+      {
+        "text": "rbwrevewg",
+        "intent": "default",
+        "entities": []
+      },
+      {
+        "text": "234t23 q34g  ,vapv qw g/d[s;b",
+        "intent": "default",
+        "entities": []
+      }
+    ]
+  }
+}
